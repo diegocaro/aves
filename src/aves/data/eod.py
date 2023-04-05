@@ -4,7 +4,12 @@ import geopandas as gpd
 import numpy as np
 import pandas as pd
 
-_DATA_PATH = Path(__file__).resolve().parent.parent.parent.parent / "data"
+try:
+    import aves.rawdata as rawdata
+    _DATA_PATH = Path(rawdata.__path__[0])
+except:
+    _DATA_PATH = Path(__file__).resolve().parent.parent.parent.parent / "data"
+
 _EOD_PATH = _DATA_PATH / "external" / "EOD_STGO"
 _EOD_MAPS = _DATA_PATH / "external" / "Zonificacion_EOD2012"
 
