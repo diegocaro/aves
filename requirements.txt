@@ -38,10 +38,10 @@ alphashape
 s2sphere
 lxml
 
-# external libraries required
-#pyrosm==0.6.1
-#graph-tool
-#gdal
+# external libraries needed before installing modules
+pyrosm==0.6.1
+graph-tool
+gdal
 
 # only if using jupyter
-#ipympl
+ipympl
